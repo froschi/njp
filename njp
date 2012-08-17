@@ -13,6 +13,10 @@ published: true
 ---
 
 # #{ARGV.join(' ')}
+
+Outline of post:
+
+* 
 eof
 
 if File.exists?(filename) then

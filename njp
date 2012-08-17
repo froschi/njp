@@ -1,0 +1,22 @@
+#!/usr/bin/env ruby
+
+# njp - new jekyll post
+# http://github.com/froschi/njp
+
+filename = Time.now.strftime("%F") + '-' + ARGV.collect{|a| a.downcase.delete("^a-z0-9")}.join('-') + '.md'
+content = <<eof
+---
+layout: default
+title: '#{ARGV.join(' ')}'
+---
+
+# #{ARGV.join(' ')}
+eof
+
+if File.exists?(filename) then
+  abort("[-] Sorry, file #{filename} already exists.")
+else
+  f = File.new(filename, 'w')
+  f.puts(content)
+  f.close
+end

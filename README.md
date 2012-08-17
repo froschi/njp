@@ -1,5 +1,4 @@
-Description
-===========
+# Description
 
 `njp` creates an empty skeleton file for a new post to be published via `jekyll`. I was tired of typing out the date and everything that has to be included in the file name whenever I created a new post.
 
@@ -29,12 +28,10 @@ title: 'New tiny tool: njp'
 
 This is pulled from a heredoc within the script; if you want to make changes, change the script.
 
-Authors
-=======
+# Authors
 
 * Thorsten Fischer (https://github.com/froschi)
 
-References
-==========
+# References
 
 * Jekyll: https://github.com/mojombo/jekyll

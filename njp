@@ -8,6 +8,8 @@ content = <<eof
 ---
 layout: default
 title: '#{ARGV.join(' ')}'
+categories: ['update']
+published: true
 ---
 
 # #{ARGV.join(' ')}

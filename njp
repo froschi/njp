@@ -26,4 +26,5 @@ else
   f = File.new(filename, 'w')
   f.puts(content)
   f.close
+  puts("Created #{filename}")
 end

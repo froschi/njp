@@ -1,0 +1,29 @@
+#!/usr/bin/env ruby
+
+require 'scanf'
+
+# ujp - update jekyll post
+# Part of the njp package
+# https://github.com/froschi/njp
+
+filename = ARGV[0]
+
+if ARGV.size != 1 then
+  abort("[-] Please provide exactly one argument.")
+end
+
+scanned = filename.scanf("%4d-%2d-%2d-%s")
+
+if scanned.size < 4 then
+  abort("[-] The filename you provided does not match the required pattern.")
+end
+
+if not File.exists?(filename) then
+  abort("[-] File #{filename} does not exist, so you cannot have it renamed.")
+end
+
+newfilename = Time.now.strftime("%F") + '-' + scanned[3]
+
+puts "[+] Renaming #{filename} to #{newfilename}"
+
+File.rename(filename, newfilename)
